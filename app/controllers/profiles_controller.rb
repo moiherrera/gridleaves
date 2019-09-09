@@ -44,7 +44,7 @@ class ProfilesController < ProtectedController
     @profile = current_user.profiles.find(params[:id])
   end
 
-    # Only allow a trusted parameter "white list" through.
+  # Only allow a trusted parameter "white list" through.
   def profile_params
     params.require(:profile).permit(:name, :location, :image_link, :personal_assets, :professional_interests, :hobbies, :projects, :contact_info, :express, :age, :pronouns, :community_assets, :user_id)
    end
